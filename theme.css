@@ -1,0 +1,93 @@
+.primary_text_color {
+  color: #1769ff;
+}
+.primary_background_color {
+  background-color: #1b27af;
+}
+.secondary_text_color {
+  color: #1769ff;
+}
+.accent_text_color {
+  color: #00ffeb;
+}
+.background_primary {
+  background-color: #1769ff;
+}
+.background_gray {
+  background-color: #f6f6ff;
+}
+.background_white {
+  background-color: #fff;
+}
+.typography_header_h1 {
+  font-size: 72px;
+}
+.typography_header_h2 {
+  font-size: 56px;
+}
+
+.typography_header_h3 {
+  font-size: 50px;
+}
+
+.typography_header_h4 {
+  font-size: 36px;
+}
+
+.typography_header_h5 {
+  font-size: 31px;
+}
+.typography_content_large {
+  font-size: 24px;
+}
+.typography_content_main {
+  font-size: 20px;
+}
+.typography_content_minor {
+  font-size: 18px;
+}
+.typography_content_mini {
+  font-size: 16px;
+}
+.typography_content_xs {
+  font-size: 14px;
+}
+
+.white_text {
+  color: #fff;
+}
+.gray_text {
+  color: #484848;
+}
+.light_gray_text {
+  color: #acb8c1;
+}
+.light_gray_text_2 {
+  color: #d7d7e2;
+}
+.light_gray_text_3 {
+  color: #707070;
+}
+.light_gray_text_4 {
+  color: #ececec;
+}
+.button_filled {
+  border: 1px solid #1b27af;
+  background: #1b27af;
+  border-radius: 6px;
+  color: #00ffeb;
+  text-transform: uppercase;
+  padding: 15px 40px;
+}
+.button_outline {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px 40px;
+}
+
+.minor {
+  margin: 30px 10px;
+}
