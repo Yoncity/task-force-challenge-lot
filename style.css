@@ -84,8 +84,10 @@ input {
   left: 0;
   top: 0;
   width: 100%;
+  scale: fill;
   height: 100vh;
   z-index: -1;
+  object-fit: cover;
 }
 .home .home_content {
   z-index: 1;
@@ -198,18 +200,10 @@ input {
 .about_us .right {
   position: relative;
 }
-.about_us .right .youtube_icon {
-  position: absolute;
-  left: 42%;
-  top: 42%;
-  width: 14%;
-  color: #ff0000;
-  /* background-color: #fff; */
-  /* scale: 4; */
-}
 
-.about_us .right img {
+.about_us .right iframe {
   width: 550px;
+  height: 300px;
 }
 
 .partners {
@@ -365,6 +359,65 @@ i:hover {
     top: -100px;
     /* padding: 20px 60px; */
     text-align: center;
+  }
+  .footer .footer_info {
+    display: flex;
+    padding: 20px 60px;
+  }
+
+  .footer .footer_info .info {
+    margin: 60px 20px;
+  }
+  .footer .footer_info .icons {
+    display: flex;
+  }
+
+  .footer .footer_info i {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 12px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+  }
+
+  .footer .contact_form {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    padding: 60px 30px;
+    border-radius: 0px 0px 6px 6px;
+  }
+  .footer .contact_form .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+  .footer .contact_form .forms input[type="text"] {
+    flex: 1;
+    align-self: flex-start;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .footer .contact_form .forms .message_textarea {
+    flex: 1;
+    align-self: flex-start;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    height: 100px;
+    vertical-align: top;
+    resize: none;
+  }
+  .footer .contact_form .forms input[type="submit"] {
+    width: 200px;
+    margin-top: 60px;
   }
 }
 
