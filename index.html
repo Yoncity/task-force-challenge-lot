@@ -12,8 +12,19 @@
       crossorigin="anonymous"
     />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="./styles/theme/laptop_theme.css" />
+    <link rel="stylesheet" href="./styles/theme/ipad_theme.css" />
+    <link rel="stylesheet" href="./styles/theme/phone_theme.css" />
     <title>LoT</title>
 
     <script
@@ -22,7 +33,7 @@
     ></script>
   </head>
   <body>
-    <div class="nav background_white">
+    <div class="nav" id="navbar">
       <div class="nav_logo">
         <img src="assets/logo.png" class="logo" />
       </div>
@@ -51,13 +62,46 @@
           </p>
 
           <div class="home_actions">
-            <div class="button_filled">Hire</div>
-            <div class="button_outline">Get Hired</div>
+            <div class="button_filled bold_text">Hire</div>
+            <div class="button_outline bold_text">Get Hired</div>
           </div>
         </div>
       </div>
 
       <div class="statistics">
+        <div class="top_dark_background background_gray"></div>
+        <div class="image_slides">
+          <img
+            src="./assets/slide_1.png"
+            onclick="showSlideShow(0)"
+            id="slide_1"
+            alt=""
+          />
+          <img
+            src="./assets/slide_4.png"
+            onclick="showSlideShow(1)"
+            id="slide_2"
+            alt=""
+          />
+          <img
+            src="./assets/slide_3.png"
+            onclick="showSlideShow(2)"
+            id="slide_3"
+            alt=""
+          />
+          <img
+            src="./assets/slide_4.png"
+            onclick="showSlideShow(3)"
+            id="slide_4"
+            alt=""
+          />
+          <img
+            src="./assets/slide_5.png"
+            onclick="showSlideShow(4)"
+            id="slide_5"
+            alt=""
+          />
+        </div>
         <div class="our_numbers primary_background_color">
           <p class="typography_header_h2 accent_text_color">Our Numbers</p>
           <p class="white_text minor">
@@ -65,7 +109,24 @@
             origin of sustainable items Brand Africa as an origin of sust
           </p>
 
-          <div class="white_text selectOption">District</div>
+          <div class="dropdown">
+            <a
+              class="btn btn-outline-light dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              District
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Nyaruenge</a></li>
+              <li><a class="dropdown-item" href="#">Kicikiro</a></li>
+              <li><a class="dropdown-item" href="#">Gasabo</a></li>
+            </ul>
+          </div>
 
           <div class="number_cards">
             <div class="number_card">
@@ -125,7 +186,8 @@
         </div>
         <div class="right">
           <img src="./assets/image_2.png" alt="" />
-          <i class="youtube_icon fab fa-youtube"></i>
+          <!-- <i class="youtube_icon fab fa-youtube"></i> -->
+          <img src="./assets/icons/youtube.png" class="youtube_icon alt="" />
         </div>
       </div>
 
@@ -133,7 +195,7 @@
         <p class="typography_header_h3 primary_text_color">Our Partners</p>
 
         <div class="partner_slides">
-          <div class="partner_slide">
+          <div class="partner_slide" id="first_partner_slide">
             <img src="./assets/image_1.png" alt="" />
             <p class="typography_header_h5 primary_text_color">
               Isimbi Paradis
@@ -148,7 +210,7 @@
             </p>
           </div>
 
-          <!-- <div class="partner_slide">
+          <div class="partner_slide" id="second_partner_slide">
             <img src="./assets/image_1.png" alt="" />
             <p class="typography_header_h5 primary_text_color">
               Isimbi Paradis
@@ -163,7 +225,7 @@
             </p>
           </div>
 
-          <div class="partner_slide">
+          <div class="partner_slide" id="third_partner_slide">
             <img src="./assets/image_1.png" alt="" />
             <p class="typography_header_h5 primary_text_color">
               Isimbi Paradis
@@ -176,7 +238,37 @@
               origin of sustainable items Brand Africa as an origin of
               sustainable items... " <span class="read_more">Read more</span>
             </p>
-          </div> -->
+          </div>
+
+          <div class="partner_slide" id="fourth_partner_slide">
+            <img src="./assets/image_1.png" alt="" />
+            <p class="typography_header_h5 primary_text_color">
+              Isimbi Paradis
+            </p>
+            <p class="light_gray_text_3 typography_content_minor">
+              Awesomity Ltd
+            </p>
+            <p class="gray_text typography_content_large">
+              "Brand Africa as an origin of sustainable items Brand Africa as an
+              origin of sustainable items Brand Africa as an origin of
+              sustainable items... " <span class="read_more">Read more</span>
+            </p>
+          </div>
+
+          <div class="partner_slide" id="fifth_partner_slide">
+            <img src="./assets/image_1.png" alt="" />
+            <p class="typography_header_h5 primary_text_color">
+              Isimbi Paradis
+            </p>
+            <p class="light_gray_text_3 typography_content_minor">
+              Awesomity Ltd
+            </p>
+            <p class="gray_text typography_content_large">
+              "Brand Africa as an origin of sustainable items Brand Africa as an
+              origin of sustainable items Brand Africa as an origin of
+              sustainable items... " <span class="read_more">Read more</span>
+            </p>
+          </div>
         </div>
 
         <i
@@ -187,6 +279,7 @@
             fas
             fa-chevron-right fa-2x
           "
+          onclick="showActivePartner()"
         ></i>
       </div>
 
@@ -199,7 +292,20 @@
     </div>
 
     <div class="footer">
-      <div class="map"></div>
+      <div class="map">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=kigali%20heights&t=&z=19&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
       <div class="primary_background_color footer_info">
         <div class="info">
           <p class="typography_content_minor white_text">OUR ADDRESS</p>
@@ -257,5 +363,6 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>

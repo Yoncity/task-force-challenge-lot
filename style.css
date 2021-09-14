@@ -1,14 +1,17 @@
 * {
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 body {
   margin: 0;
   padding: 0;
 }
-
 p,
 h1 {
   margin: 0;
+}
+input {
+  outline: none;
 }
 
 .nav {
@@ -19,6 +22,7 @@ h1 {
   display: flex;
   align-items: center;
   z-index: 2;
+  transition: 0.3s linear;
 }
 .nav_logo {
   margin: 5px 10px 5px 30px;
@@ -37,6 +41,10 @@ h1 {
   align-items: center;
   justify-content: flex-end;
   margin: 0;
+}
+.nav_links ul li:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .nav_links ul li {
   font-size: 16px;
@@ -80,7 +88,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 70px;
+  margin: 0 150px;
 }
 .home .home_content .home_actions {
   display: flex;
@@ -92,22 +100,51 @@ h1 {
   text-align: center;
 }
 .statistics {
-  padding: 20px 60px;
+  position: relative;
+  top: -130px;
+  /* padding: 20px 60px; */
   text-align: center;
 }
+.top_dark_background {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  z-index: -2;
+}
+.statistics .image_slides {
+  display: flex;
+  overflow-x: hidden;
+  transition: all 0.3s linear;
+  margin: 0px 60px;
+}
+.statistics .image_slides img {
+  margin: 0 20px;
+}
 .statistics .our_numbers {
+  position: relative;
   padding: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  margin: 20px 60px;
 }
 .our_numbers .minor {
   margin: 20px 250px;
 }
-.statistics .our_numbers .selectOption {
+.statistics .our_numbers .dropdown {
   margin: 90px 0 30px 0;
+}
+.statistics .our_numbers .dropdown .btn {
+  width: 250px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-menu {
+  width: 250px;
 }
 .statistics .our_numbers .number_cards {
   display: flex;
@@ -120,6 +157,9 @@ h1 {
   flex-direction: column;
   align-items: center;
   overflow: auto;
+}
+.number_card .typography_header_h1 {
+  font-weight: 200;
 }
 .number_card .typography_content_minor {
   margin: 10px;
@@ -156,11 +196,12 @@ h1 {
 }
 .about_us .right .youtube_icon {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 42%;
+  top: 42%;
+  width: 14%;
   color: #ff0000;
-  background-color: #fff;
-  scale: 4;
+  /* background-color: #fff; */
+  /* scale: 4; */
 }
 
 .about_us .right img {
@@ -185,10 +226,8 @@ h1 {
 }
 
 .partners .partner_slides {
-  /* border: 1px solid black; */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-x: hidden;
 }
 
 .partners .partner_slides .partner_slide {
@@ -238,6 +277,17 @@ i:hover {
   width: 100%;
   height: 500px;
   background: #ccc;
+  display: flex;
+}
+.mapouter {
+  width: 100%;
+  height: 100%;
+}
+#gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
 }
 .footer .footer_info {
   display: flex;
@@ -280,14 +330,16 @@ i:hover {
   margin-top: 20px;
 }
 .footer .contact_form .forms input[type="text"] {
-  width: 450px;
+  flex: 1;
+  align-self: flex-start;
   padding: 15px;
   margin: 8px 0;
   border: none;
   border-bottom: 1px solid #ddd;
 }
 .footer .contact_form .forms .message_textarea {
-  width: 450px;
+  flex: 1;
+  align-self: flex-start;
   padding: 15px;
   margin: 8px 0;
   border: none;
@@ -300,3 +352,16 @@ i:hover {
   width: 200px;
   margin-top: 60px;
 }
+
+/* =========================================================== */
+
+@media only screen and (max-width: 1366px) {
+  .statistics {
+    position: relative;
+    top: -100px;
+    /* padding: 20px 60px; */
+    text-align: center;
+  }
+}
+
+/* =========================================================== */

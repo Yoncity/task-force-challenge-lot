@@ -21,21 +21,26 @@
 }
 .typography_header_h1 {
   font-size: 72px;
+  font-weight: bold;
 }
 .typography_header_h2 {
   font-size: 56px;
+  font-weight: bold;
 }
 
 .typography_header_h3 {
   font-size: 50px;
+  font-weight: bold;
 }
 
 .typography_header_h4 {
   font-size: 36px;
+  font-weight: bold;
 }
 
 .typography_header_h5 {
   font-size: 31px;
+  font-weight: bold;
 }
 .typography_content_large {
   font-size: 24px;
@@ -45,6 +50,7 @@
 }
 .typography_content_minor {
   font-size: 18px;
+  font-weight: bold;
 }
 .typography_content_mini {
   font-size: 16px;
@@ -70,6 +76,9 @@
 }
 .light_gray_text_4 {
   color: #ececec;
+}
+.bold_text {
+  font-weight: bold;
 }
 .button_filled {
   border: 1px solid #1b27af;
