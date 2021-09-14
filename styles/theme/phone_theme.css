@@ -1,29 +1,29 @@
 @media only screen and (max-width: 480px) {
   .typography_header_h1 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
   }
   .typography_header_h2 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: bold;
   }
 
   .typography_header_h3 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
   }
 
   .typography_header_h4 {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: bold;
   }
 
   .typography_header_h5 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
   }
   .typography_content_large {
-    font-size: 20px;
+    font-size: 19px;
   }
   .typography_content_main {
     font-size: 18px;

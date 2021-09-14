@@ -20,11 +20,18 @@
       rel="stylesheet"
     />
 
+    <!-- Default Theme and Style -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="theme.css" />
+
+    <!-- Responsive Themes -->
     <link rel="stylesheet" href="./styles/theme/laptop_theme.css" />
     <link rel="stylesheet" href="./styles/theme/ipad_theme.css" />
     <link rel="stylesheet" href="./styles/theme/phone_theme.css" />
+
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="./styles/phone_style.css" />
+
     <title>LoT</title>
 
     <script
@@ -35,6 +42,11 @@
   <body>
     <div class="nav" id="navbar">
       <div class="nav_logo">
+        <i
+          class="fas fa-bars menu_icon white_text"
+          id="menuIcon"
+          onclick="toggleMenu()"
+        ></i>
         <img src="assets/logo.png" class="logo" />
       </div>
       <div class="nav_links">
@@ -139,7 +151,7 @@
 
             <div class="number_card">
               <p class="accent_text_color typography_header_h1">1065</p>
-              <p class="white_text typography_content_minor">EMPLOYERS</p>
+              <p class="white_text typography_content_minor">JOBS</p>
               <p class="light_gray_text_2 typography_content_mini">
                 Employees training to finsuitable jobs aldkfjdla
               </p>
@@ -147,7 +159,9 @@
 
             <div class="number_card">
               <p class="accent_text_color typography_header_h1">1065</p>
-              <p class="white_text typography_content_minor">EMPLOYERS</p>
+              <p class="white_text typography_content_minor">
+                ONGOING PROJECTS
+              </p>
               <p class="light_gray_text_2 typography_content_mini">
                 Employees training to finsuitable jobs
               </p>
@@ -306,6 +320,16 @@
           </div>
         </div>
       </div>
+      <div class="primary_text_color contact_form background_white">
+        <p class="typography_header_h1">Contact us</p>
+        <div class="forms">
+          <input type="text" placeholder="Names" />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Phone Number" />
+          <textarea class="message_textarea" placeholder="Message"></textarea>
+          <input type="submit" class="button_filled" value="Send Message" />
+        </div>
+      </div>
       <div class="primary_background_color footer_info">
         <div class="info">
           <p class="typography_content_minor white_text">OUR ADDRESS</p>
@@ -344,16 +368,6 @@
           <i
             class="background_primary primary_text_color fab fa-youtube fa-1x"
           ></i>
-        </div>
-      </div>
-      <div class="primary_text_color contact_form background_white">
-        <p class="typography_header_h1">Contact us</p>
-        <div class="forms">
-          <input type="text" placeholder="Names" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Phone Number" />
-          <textarea class="message_textarea" placeholder="Message"></textarea>
-          <input type="submit" class="button_filled" value="Send Message" />
         </div>
       </div>
     </div>

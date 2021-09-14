@@ -2,9 +2,14 @@ window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
 
   const navbar = document.querySelector("#navbar");
+  const menuIcon = document.querySelector("#menuIcon");
   if (scroll > 500) {
     navbar.className = "nav background_white";
-  } else navbar.className = "nav";
+    menuIcon.className = "fas fa-bars menu_icon gray_text";
+  } else {
+    navbar.className = "nav";
+    menuIcon.className = "fas fa-bars menu_icon white_text";
+  }
 });
 
 let active = 1;
@@ -35,4 +40,18 @@ const showSlideShow = (id) => {
   //   setInterval(() => {
   //     console.log("Ola");
   //   }, 2000);
+};
+
+let showNavbar = 0;
+const toggleMenu = () => {
+  const navbar = document.querySelector(".nav_links");
+  console.log("clicked", showNavbar);
+
+  if (showNavbar === 0) {
+    showNavbar = 1;
+    navbar.classList = "nav_links show_navbar";
+  } else {
+    showNavbar = 0;
+    navbar.classList = "nav_links";
+  }
 };
